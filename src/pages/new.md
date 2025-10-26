@@ -2,7 +2,7 @@
 title: DEMOCRAFT
 description: 3 ans de travail et un jeu en crise pour une bête question d'éthique ~ voilà le speech.
 banner: /
-layout: "../Markdown"
+layout: "../layouts/Markdown.astro"
 ---
 
 # 3 ans d'histoires...
