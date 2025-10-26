@@ -6,12 +6,13 @@ import Head from "../layouts/Head.astro";
 <html lang="fr">
   <Head title={frontmatter.title} />
   <body class="w-screen">
- <div class="p-4 md:px-32 md:py-16 flex flex-col gap-8">
-    <img src="https://wiki.democraft.fr/api/lobby" alt="" class="sm:h-128 sm:w-256 rounded-xl" />
-    <h1 class="text-3xl md:text-6xl font-bold">{frontmatter.title}</h1>
-    <p>{frontmatter.description}</p>
-    <article class="prose-sm">
-      <slot />
-    </article></div>
+    <div class="p-4 md:px-32 md:py-16 flex flex-col gap-8">
+       <img src="https://wiki.democraft.fr/api/lobby" alt="" class="sm:h-128 sm:w-256 rounded-xl" />
+       <h1 class="text-4xl md:text-6xl font-bold">{frontmatter.title}</h1>
+       <p>{frontmatter.description}</p>
+       <article class="prose-sm">
+          <slot />
+       </article>
+     </div>
   </body>
 </html>
