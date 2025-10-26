@@ -1,2 +1,76 @@
 @import "tailwindcss";
-@plugin "daisyui";
+@plugin "@tailwindcss/typography";
+
+@plugin "daisyui" {
+  exclude: scrollbar;
+  logs: false;
+}
+
+@plugin "daisyui/theme" {
+  name: "luxury";
+  default: true;
+  prefersdark: true;
+  color-scheme: "dark";
+  --color-base-content: oklch(92% 0.006 264.531);
+  --color-primary: oklch(80% 0.114 19.571);
+  --color-primary-content: oklch(41% 0.159 10.272);
+  --color-secondary: oklch(90% 0.076 70.697);
+  --color-secondary-content: oklch(47% 0.137 46.201);
+  --color-accent: oklch(91% 0.096 180.426);
+  --color-accent-content: oklch(38% 0.063 188.416);
+  --color-neutral: oklch(92% 0.013 255.508);
+  --color-neutral-content: oklch(44% 0.043 257.281);
+  --color-info: oklch(82% 0.111 230.318);
+  --color-info-content: oklch(29% 0.066 243.157);
+  --color-success: oklch(66% 0.084 155.995);
+  --color-success-content: oklch(37% 0.077 168.94);
+  --color-warning: oklch(76% 0.129 101.54);
+  --color-warning-content: oklch(41% 0.112 45.904);
+  --color-error: oklch(56% 0.194 13.428);
+  --color-error-content: oklch(27% 0.105 12.094);
+  --radius-selector: 1rem;
+  --radius-field: 0.5rem;
+  --radius-box: 1rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.3125rem;
+  --border: 2px;
+  --depth: 1;
+  --noise: 0;
+}
+
+@custom-variant dark (&:where([data-theme=demodark], [data-theme=demodark] *));
+
+:root {
+  scrollbar-color: color-mix(in oklch,currentColor 35%,#0000) var(--color-base-100);
+}
+
+.prose {
+  :where(blockquote p:first-of-type):not(:where([class~="not-prose"], [class~="not-prose"] *))::before {
+    content: none !important;
+  }
+}
+
+:root {
+  --font-sans : "Jetbrains Mono", "Fluent Emoji Color", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+h1, h2, h3, h4, h5, h6, .heading {
+  font-family: 'Minecraft Five', sans-serif;
+}
+
+
+@font-face {
+  font-family: 'Minecraft Five';
+  src: url('/fonts/MinecraftFive.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Minecraft Five';
+  src: url('/fonts/MinecraftFiveBold.otf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}

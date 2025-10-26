@@ -2,27 +2,17 @@
 // Ici, on peux ajouter du code, des fichiers ou des variables que l'on pouras ensuite utiliser dans l'HTML
 
 // On importe le composant Icon de astro-icon pour pouvoir l'utiliser dans notre HTML
+import Layout from "../layouts/Layout.astro";
 import { Icon } from "astro-icon/components";
 import "../assets/app.css";
 ---
 
-<html lang="fr">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-  </head>
-  <body class="w-screen">
-    <!-- Ce tag avec la classe "prose" réactive le style des composants h* -->
-    <article class="prose prose-md mx-auto my-4 text-center">
-      <!-- MX ajoute de la marge sur l'axe X et MY ajoute de la marge sur l'axe Y (ici 4rem)
-	La liste des valeurs possible est sur tailwindcss.com -->
-      <h1 class="inline-flex align-baseline">
-        <Icon name="skill-icons:rocket" class="mr-2 align-baseline" />
-        Mon premier site avec Astro <h1></h1>
-      </h1>
-    </article>
-  </body>
-</html>
+<Layout>
+  <div class="p-4 md:px-32 md:py-16 flex flex-col gap-8">
+    <img src="https://wiki.democraft.fr/api/lobby" alt="" class="h-128 w-256 rounded-xl" />
+    <h1 class="text-3xl md:text-6xl font-bold">DEMOCRAFT</h1>
+    <p class="text-2xl">3 ans de travail et un jeu en crise pour une bête question d'éthique ~ voilà le speech.</p>
+    
+    <h2 class="text-2xl md:text-4xl mt-8 mb-4 font-semibold"></h2>
+  </div>
+</Layout>
